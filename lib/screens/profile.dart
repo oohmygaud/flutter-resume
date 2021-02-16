@@ -8,8 +8,14 @@ final List<String> imgList = [
   'images/paywei-screenshot.png',
 ];
 
-final List<String> imgDescription = [
+final List<String> imgTitle = [
   'StreamHuddle',
+  'TXGun',
+  'Paywei',
+];
+
+final List<String> imgDescription = [
+  'Permissions-based cloud scene rendering engine for video streaming',
   'TXGun',
   'Paywei',
 ];
@@ -24,7 +30,7 @@ final List<Widget> imageSliders = imgList
                 children: [
                   ListTile(
                     leading: Icon(Icons.arrow_drop_down_circle),
-                    title: Text('StreamHuddle'),
+                    title: Text(imgTitle[imgList.indexOf(item)]),
                     subtitle: Text(
                       "Django and React",
                       style: TextStyle(
@@ -35,13 +41,13 @@ final List<Widget> imageSliders = imgList
                   Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text(
-                      'Permissions-based cloud scene rendering engine for video streaming',
+                      imgDescription[imgList.indexOf(item)],
                       style: TextStyle(
                         color: Colors.black.withOpacity(0.6),
                       ),
                     ),
                   ),
-                  Image.asset('images/streamhuddle-screenshot.png')
+                  Image.asset(item),
                 ],
               ),
             ),
@@ -116,9 +122,8 @@ class _ProfileState extends State<Profile> {
               ),
               CarouselSlider(
                 options: CarouselOptions(
-                  height: 350.0,
+                  height: 370.0,
                   aspectRatio: 2.0,
-                  enlargeCenterPage: true,
                   enableInfiniteScroll: false,
                 ),
                 items: imageSliders,

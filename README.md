@@ -1,6 +1,6 @@
 # flutter_resume
 
-A new Flutter application.
+A mobile portfolio app
 
 ## Getting Started
 
